@@ -17,7 +17,7 @@ pipeline {
         stage('Deliver') {
                     steps {
                         sh 'pwd'
-                        sh 'npm start'
+                        sh './jenkins/deliver.sh'
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
                     }
                 }
