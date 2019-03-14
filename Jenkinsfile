@@ -12,7 +12,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
-                sh 'docker run --rm -i -t alpine /bin/sh'
             }
         }
         stage('Deliver') {
