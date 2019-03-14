@@ -17,7 +17,7 @@ pipeline {
         stage('Deliver') {
                     steps {
                         sh 'pwd'
-                        docker run --rm -i -t alpine /bin/sh './jenkins/deliver.sh'
+                        docker run --rm -i -t alpine /bin/sh  './jenkins/deliver.sh'
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
                     }
                 }
