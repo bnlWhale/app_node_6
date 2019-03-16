@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deliver') {
                     steps {
-                        docker run  -i -t  node:6-alpine /bin/bash
+                        docker run  -i -t  6-alpine /bin/bash
 
 
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
