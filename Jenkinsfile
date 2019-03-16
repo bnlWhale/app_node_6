@@ -18,7 +18,7 @@ pipeline {
                     steps {
                         docker container list -a
 
-                        sh  './jenkins/deliver.sh'
+
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
                     }
                 }
