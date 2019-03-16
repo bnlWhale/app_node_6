@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deliver') {
                     steps {
-                        docker container list -a
+                        docker run  -i -t  jenkinsci/blueocean /bin/bash
 
 
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
