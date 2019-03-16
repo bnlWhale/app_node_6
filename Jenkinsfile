@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
                     steps {
-                        sh  './jenkins/deliver.sh'
+                        docker version
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
                     }
                 }
