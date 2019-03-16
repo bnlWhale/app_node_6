@@ -12,14 +12,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
-                sh npm install --save-dev cross-env
+                sh 'npm install --save-dev cross-env'
+
             }
         }
         stage('Deliver') {
                     steps {
-                        docker run  -i -t  6-alpine /bin/bash
-
-
+                        sh  './jenkins/deliver.sh'
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
                     }
                 }
