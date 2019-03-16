@@ -19,7 +19,7 @@ pipeline {
         stage('Deliver') {
                     steps {
 
-                        docker run  -i -t  app_node_6_master /bin/bash
+                        docker run  -i -t  app_node_6 /bin/bash
 
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
                     }
